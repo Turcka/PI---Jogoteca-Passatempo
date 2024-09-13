@@ -27,3 +27,8 @@ nav{
     padding-left: 20%;
     font-size: 150%;
 }
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
