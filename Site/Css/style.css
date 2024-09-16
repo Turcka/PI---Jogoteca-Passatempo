@@ -17,6 +17,27 @@ nav{
     align-items: center;
 }
 
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+a:hover{
+    color: black;
+}
+
+header{
+    width: 100%;
+    height: 90vh;
+    background-image: url(/Site/Imagens/PassatempoLogoSemTexto.png);
+    background-repeat: no-repeat;
+    background-size: 80vh;
+    background-position: center;
+}
+
+
 .imagemNav{
     width: auto;
     margin-left: 1%;
@@ -30,7 +51,25 @@ nav{
     font-size: 150%;
 }
 
-a{
-    text-decoration: none;
-    color: whitesmoke;
+.primeiraSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jogotecaInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo1{
+    font-size: 200%;
+}
+
+.descricao{
+    width: 50%;
+    padding-top: 5%;
 }
