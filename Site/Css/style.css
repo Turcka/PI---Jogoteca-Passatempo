@@ -9,12 +9,13 @@
 } */
 
 nav{
-    /* width: 335%; */
+    width: 100%;
     background-color: rgb(64, 9, 230);
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    position: fixed;
 }
 
 
