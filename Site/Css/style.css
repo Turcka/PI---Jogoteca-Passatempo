@@ -56,6 +56,14 @@ header::before {
     z-index: -1;
 }
 
+h1{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
 .imagemNav{
     width: auto;
     margin-left: 1%;
@@ -84,10 +92,6 @@ header::before {
     padding-top: 10vh;
 }
 
-.titulo1{
-    font-size: 200%;
-}
-
 .descricao{
     width: 50%;
     padding-top: 5%;
@@ -98,4 +102,20 @@ header::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.salaDeAula{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.artesaos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
 }
