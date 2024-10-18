@@ -1,0 +1,40 @@
+form{
+    padding-left: 200px;
+}
+.titulo{
+    padding: 30px 0px 0px 300px;
+}
+
+.forms{
+    padding-top: 70px;
+}
+
+textarea{
+    position: flex;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    height: 20px;
+    width: 400px;
+    border: none;
+    outline: none;
+    font-size: 36;
+    border-bottom: 2px solid black;
+}
+
+.btn-env{
+    padding-top: 30px;
+    padding-left: 25px;
+}
+.enviar{
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    cursor: pointer;
+    position: relative;
+    border-radius: 30px;
+    height: 70px;
+    width: 350px;
+}
