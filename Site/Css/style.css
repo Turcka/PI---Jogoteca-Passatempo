@@ -1,7 +1,7 @@
 *{
     margin: 0;
+    font-family: "Roboto", sans-serif;
 }
-
 /* html{
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +10,7 @@
 
 nav{
     width: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: start;
