@@ -82,3 +82,32 @@ p{
     margin-left: 1%;
     margin-top: 0.25%;
 }
+
+footer{
+    text-align: center;
+    background-color: blue;
+    padding: 50px 0px 50px 0px;
+    z-index: -2;
+}
+
+footer ul{
+    display: inline;
+    top: 30px;
+}
+
+footer li{
+    position: relative;
+    display: inline;
+    padding-left: 50px;
+    z-index: 1;
+}
+
+footer li::before{
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
+    z-index: -1;
+}
