@@ -7,6 +7,21 @@
     flex-wrap: wrap;
     width: 100%;
 } */
+header{
+    position: fixed;
+    width: 100%;
+    height: 10vh
+
+}
+
+/* header::after{
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 1vh;
+    background-image: linear-gradient(red,yellow, blue);
+    top: 10vh;
+} */
 
 nav{
     width: 100%;
@@ -16,44 +31,52 @@ nav{
     justify-content: start;
     align-items: center;
     position: fixed;
+    margin: auto;
+    height: 10vh;
+    box-shadow: 0px 0px 8px 0px rgb(255, 0, 0);
+
 }
 
+nav ul{
+    align-items: center;
+    display: inline;
+}
+
+nav li{
+    display: inline-flex;
+    margin-left: 20px;
+
+}
 
 nav a{
+    position: relative;
     text-decoration: none;
     color: rgb(201, 25, 25);
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
 
-nav a:hover{
-    /* color: black; */
-    text-decoration: underline;
-}
-
-header{
-    width: 100%;
-    height: 100vh;
-    /* background-image: url(../Imagens/PassatempoLogoSemTexto.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 80vh;
-    background-position: center; */
-}
-
-header::before {
+nav a:after{
     content: "";
     position: absolute;
-    top: 0; 
+    width: 0;
+    height: 3px;
+    background-color: rgba(201, 25, 25, 0.8);
+    transition: 0.3s;
     left: 0;
-    right: 0; 
-    bottom: 0;
-    background-attachment: fixed;
-    background-image: url(../Imagens/criancasbrincando2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+    bottom: -3px;
+    border-radius: 90px;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    padding-left: 50%;
+    font-size: 150%;
 }
 
 h1{
@@ -70,67 +93,35 @@ p{
     margin-top: 0.25%;
 }
 
-.cabecalho{
-    display: flex;
-    flex-direction: row;
-    padding-left: 50%;
-    font-size: 150%;
+footer{
+    text-align: center;
+    background-color: blue;
+    padding: 50px 0px 50px 0px;
+    z-index: -2;
 }
 
-.primeiraSec{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+footer ul{
+    display: inline;
+    top: 30px;
 }
 
-.jogotecaInfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10vh;
+footer li{
+    position: relative;
+    display: inline;
+    padding-left: 50px;
+    z-index: 1;
 }
 
-.descricao{
-    width: 50%;
-    padding-top: 5%;
-}
-
-.segundaSec{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.salaDeAula{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10vh;
-}
-
-.artesaos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10vh;
-}
-
-.catalogoHead::before{
-    content: "";
+footer li::before{
+    content:"";
     position: absolute;
-    top: 0; 
-    left: 0;
-    right: 0; 
-    bottom: 0;
-    background-attachment: fixed;
-    background-image: url(../Imagens/MapaMundiBW.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
     z-index: -1;
+}
+
+.copyright{
+    margin-top: 50px;
 }

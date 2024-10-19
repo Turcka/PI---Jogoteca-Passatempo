@@ -1,0 +1,59 @@
+.background{
+    content: "";
+    position: flex;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background-attachment: fixed;
+    background-image: url(../Imagens/criancasbrincando2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: -1;
+}
+
+.primeiraSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jogotecaInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.descricao{
+    width: 50%;
+    padding-top: 5%;
+}
+
+.segundaSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.salaDeAula{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.artesaos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
