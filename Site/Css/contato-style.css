@@ -2,9 +2,14 @@ main{
     height: 100vh;
 }
 
+.container-main{
+    display: flex;
+}
+
 form{
     padding-left: 200px;
 }
+
 .titulo{
     padding: 130px 0px 0px 300px;
 }
@@ -16,13 +21,16 @@ form{
 textarea{
     position: flex;
     padding-top: 10px;
+    margin-top: 10px;
     margin-bottom: 20px;
     height: 20px;
     width: 400px;
     border: none;
     outline: none;
-    font-size: 36;
+    font-size: 16px;
     border-bottom: 2px solid black;
+    resize: none;
+    max-height: 200px;
 }
 
 .btn-env{
@@ -43,17 +51,31 @@ textarea{
     width: 350px;
 }
 
+.container-infos{
+    padding: 130px 0px 0px 300px;
+    text-align: center;
+    align-items: center;
+}
+
 .maps{
     position: relative;
-    width: 600px;
+    width: 700px;
     height: 500px;
     background-color: black;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .maps iframe{
-    padding: 2.5% 0 0 2.5%;
-    width: 95%;
-    height: 95%;
-    border-radius: 30px;
+    padding-top: 5px;
+    width: 98%;
+    height: 98%;
+    border-radius: 10px;
+}
+
+.infos{
+    padding-top: 50px;
+}
+
+.endereco{
+    padding-bottom: 30px;
 }

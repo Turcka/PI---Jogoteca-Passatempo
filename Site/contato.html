@@ -38,15 +38,16 @@
                 <form>
                     <div class="forms">
                         <h2>Nome Completo</h2>
-                        <textarea type="text" name="nome" id="nome" required></textarea>
+                        <textarea type="text" maxlength="50" name="nome" id="nome" required></textarea>
+                        
                     </div>
                     <div>
                         <h2>E-mail</h2>
-                        <textarea type="email" name="email" id="email" required></textarea>
+                        <textarea type="email" maxlength="50" name="email" id="email" required></textarea>
                     </div>
                     <div>
                         <h2>Mensagem</h2>
-                        <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+                        <textarea oninput="autoResize(this)" name="msg" maxlength="1000" id="msg" required></textarea>
                     </div>
                     <div class="btn-env">
                         <button class="enviar">Enviar</button>
@@ -55,22 +56,36 @@
             </div>
             <div class="container-infos">
                 <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14621.257718943902!2d-46.63292!3d-23.628908000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5afde1dab309%3A0x416a1b89278a671e!2sR.%20dos%20Democratas%2C%20975%20-%20Vila%20Monte%20Alegre%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004305-000%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1729373199405!5m2!1spt-BR!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14621.257718943902!2d-46.63292!3d-23.628908000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5afde1dab309%3A0x416a1b89278a671e!2sR.%20dos%20Democratas%2C%20975%20-%20Vila%20Monte%20Alegre%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004305-000%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1729373199405!5m2!1spt-BR!2sus"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="infos">
+                    <h2>Endereço</h2>
+                    <h3 class="endereco">Rua dos Democratas, 975 - Vila Monte Alegre</h3>
+                    <h2>Telefone</h2>
+                    <h3 class="telefone">11 99757-9540</h3>
                 </div>
             </div>
         </div>
-        
+
     </main>
     <footer>
         <ul>
-            <li><a href="https://www.instagram.com/passatempoeducativo/"><img src="./Imagens/insta.png" height="100px"></a></li>
-            <li><a href="https://www.facebook.com/Passatempoedu?_rdr"><img src="./Imagens/face.png" height="100px"></a></li>
+            <li><a href="https://www.instagram.com/passatempoeducativo/"><img src="./Imagens/insta.png"
+                        height="100px"></a></li>
+            <li><a href="https://www.facebook.com/Passatempoedu?_rdr"><img src="./Imagens/face.png" height="100px"></a>
+            </li>
             <li><a href=""><img src="./Imagens/whats.png" height="100px"></a></li>
-            <li><a href=https://www.youtube.com/channel/UCmjjEtnmVvDNJAkpQmU6gUA""><img src="./Imagens/youtube.png" height="100px"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCmjjEtnmVvDNJAkpQmU6gUA"><img src="./Imagens/youtube.png"
+                        height="100px"></a></li>
             <li><a href="https://x.com/passatempoedu"><img src="./Imagens/twitter.png" height="100px"></a></li>
         </ul>
         <h2 class="copyright">Copyright © 2024 | Passatempo Educativo</h2>
     </footer>
+
+    <script src="./Js/contato.js"></script>
 </body>
 
 </html>
