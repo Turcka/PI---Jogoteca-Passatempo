@@ -4,6 +4,7 @@ main{
 
 .container-main{
     display: flex;
+    height: 100vh;
 }
 
 form{
@@ -51,8 +52,18 @@ textarea{
     width: 350px;
 }
 
+.container-forms{
+    padding-left: 10%;
+    padding-bottom: 25%;
+}
+
 .container-infos{
-    padding: 130px 0px 0px 300px;
+    /* padding: 130px 0px 0px 300px; */
+    height: fit-content;
+    padding-left: 20%;
+    padding-top: 7%;
+    padding-right: 3%;
+    padding-bottom: 10%;
     text-align: center;
     align-items: center;
 }
@@ -73,7 +84,8 @@ textarea{
 }
 
 .infos{
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    padding-top: 5%;
 }
 
 .endereco{
