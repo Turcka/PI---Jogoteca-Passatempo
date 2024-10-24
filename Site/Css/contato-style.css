@@ -24,8 +24,8 @@ textarea{
     padding-top: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
-    height: 20px;
-    width: 400px;
+    height: 4vh;
+    width: 28vw;
     border: none;
     outline: none;
     font-size: 16px;
@@ -39,7 +39,7 @@ textarea{
 }
 
 .enviar{
-    padding: 15px 40px;
+    padding: 15px;
     border: none;
     outline: none;
     font-size: 25px;
@@ -48,8 +48,8 @@ textarea{
     cursor: pointer;
     position: relative;
     border-radius: 30px;
-    height: 70px;
-    width: 350px;
+    height: 10vh;
+    width: 25vw;
 }
 
 .container-forms{
