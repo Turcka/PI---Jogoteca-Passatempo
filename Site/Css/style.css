@@ -81,12 +81,15 @@ p{
     margin-top: 0.25%;
 }
 
+.imagemNav img{
+    height: 10vh;
+}
+
 footer{
     text-align: center;
     background-color: blue;
-    /* padding: 50px 0px 50px 0px; */
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     z-index: -2;
 }
 

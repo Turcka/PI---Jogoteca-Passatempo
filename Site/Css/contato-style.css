@@ -1,5 +1,6 @@
 main{
     height: 100vh;
+    padding-bottom: 100px;
 }
 
 .container-main{
@@ -9,81 +10,75 @@ main{
 }
 
 form{
-    padding-left: 200px;
+    padding-left: 10vw;
 }
 
 .titulo{
-    padding: 130px 0px 0px 300px;
+    padding: 16vh 0px 0px 5vw;
 }
 
 .forms{
-    padding-top: 130px;
+    padding-top: 10vh;
 }
 
-textarea{
-    position: flex;
+textarea {
     padding-top: 10px;
-    margin-top: 10px;
     margin-bottom: 20px;
     height: 4vh;
-    width: 28vw;
+    width: 24vw;
     border: none;
     outline: none;
     font-size: 16px;
     border-bottom: 2px solid black;
-    resize: none;
-    max-height: 200px;
+    resize: none !important; 
+    max-height: 16vh;
 }
 
+
 .btn-env{
-    padding: 30px 0px 0px 25px;
+    padding: 2.3vh 0px 2vh 2.8vw;
 }
 
 .enviar{
-    padding: 15px;
     border: none;
     outline: none;
-    font-size: 25px;
+    font-size: 2vw;
     color: rgb(0, 0, 0);
     background-color: yellow;
     cursor: pointer;
     position: relative;
     border-radius: 30px;
-    height: 10vh;
-    width: 25vw;
+    height: 8vh;
+    width: 18vw;
 }
 
 .container-forms{
-    padding-left: 10%;
-    padding-bottom: 25%;
+    padding-left: 10vw;
+    padding-bottom: 10vh;
 }
 
 .container-infos{
-    height: fit-content;
-    padding: 130px 25px 0px 150px;
+    padding: 14vh 5vw 0px 5vw;
     text-align: center;
     align-items: center;
 }
 
 .maps{
     position: relative;
-    width: 400px;
-    height: 350px;
+    width: 50vw;
+    height: 50vh;
     background-color: black;
     border-radius: 20px;
 }
 
 .maps iframe{
-    padding-top: 5px;
-    width: 99%;
-    height: 99%;
-    border-radius: 10px;
+    padding-top: 1%;
+    width: 99.9%;
+    height: 98%;
+    border-radius: 20px;
 }
 
 .infos{
     padding-top: 5%;
-}
-
-.endereco{
-    padding-bottom: 30px;
+    padding-bottom: 5%;
 }

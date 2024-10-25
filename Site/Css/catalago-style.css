@@ -84,12 +84,12 @@ article{
     border-radius: 30px;
     height: 8vh;
     width: 25vw;
+    transition: 0.4s ease-in-out;
 }
 
 .butn:hover{
     color: whitesmoke;
     background-color: blue;
-    transition: 0.3s;
 }
 
 @media (max-width: 1225px) {
