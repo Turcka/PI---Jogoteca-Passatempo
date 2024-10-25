@@ -11,3 +11,41 @@ header::before{
     background-size: cover;
     background-position: center;
 }
+
+article{
+    height: 100vh;
+}
+
+.sec1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.titulo{
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+}
+
+.mapa{
+    width: 100%;
+    justify-content: center;
+    padding-top: 3%;
+    padding-left: 3%;
+}
+
+.formulario{
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms{
+    justify-content: center;
+}
+
+.img{
+    width: 100vw;
+}
