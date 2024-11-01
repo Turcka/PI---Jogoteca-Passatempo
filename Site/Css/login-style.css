@@ -1,0 +1,25 @@
+.container-main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+form{
+    padding-left: 18vw;
+}
+
+.container-login{
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.conteudoForms{
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    padding-left: 20vw;
+    padding-bottom: 5vh;
+}
