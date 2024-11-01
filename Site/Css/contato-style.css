@@ -80,7 +80,16 @@ textarea {
     border-radius: 20px;
 }
 
+.blocoEndereco{
+    padding-top: 2vh;
+}
+
 .infos{
     padding-top: 5%;
     padding-bottom: 5%;
+    height: auto;
+    width: auto;
+    /* color: whitesmoke;
+    background-color: black;
+    border-radius: 20px; */
 }
