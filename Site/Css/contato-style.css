@@ -46,6 +46,12 @@ textarea {
     border-radius: 30px;
     height: 8vh;
     width: 18vw;
+    transition: 0.4s ease-in-out;
+}
+
+.enviar:hover{
+    color: whitesmoke;
+    background-color: blue;
 }
 
 .container-forms{
