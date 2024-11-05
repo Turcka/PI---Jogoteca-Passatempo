@@ -46,6 +46,12 @@ textarea {
     border-radius: 30px;
     height: 8vh;
     width: 18vw;
+    transition: 0.4s ease-in-out;
+}
+
+.enviar:hover{
+    color: whitesmoke;
+    background-color: blue;
 }
 
 .container-forms{
@@ -74,7 +80,16 @@ textarea {
     border-radius: 20px;
 }
 
+.blocoEndereco{
+    padding-top: 2vh;
+}
+
 .infos{
     padding-top: 5%;
     padding-bottom: 5%;
+    height: auto;
+    width: auto;
+    /* color: whitesmoke;
+    background-color: black;
+    border-radius: 20px; */
 }
