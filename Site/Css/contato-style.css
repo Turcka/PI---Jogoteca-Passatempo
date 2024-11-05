@@ -10,7 +10,7 @@ form{
 }
 
 .titulo{
-    padding: 16vh 0px 0px 5vw;
+    padding: 16vh 0px 0px 8vw;
 }
 
 .forms{
@@ -19,20 +19,20 @@ form{
 
 textarea {
     padding-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     height: 4vh;
-    width: 24vw;
+    width: 25vw;
     border: none;
     outline: none;
     font-size: 16px;
     border-bottom: 2px solid black;
-    resize: none !important; 
+    resize: none; 
     max-height: 16vh;
 }
 
 
 .btn-env{
-    padding: 2.3vh 0px 2vh 2.8vw;
+    padding: 2.3vh 0px 2vh 3.3vw;
 }
 
 .enviar{
@@ -60,15 +60,15 @@ textarea {
 }
 
 .container-infos{
-    padding: 14vh 5vw 0px 5vw;
+    padding: 14vh 5vw 0px 10vw;
     text-align: center;
     align-items: center;
 }
 
 .maps{
     position: relative;
-    width: 50vw;
-    height: 50vh;
+    width: 45vw;
+    height: 45vh;
     background-color: black;
     border-radius: 20px;
 }
@@ -89,7 +89,4 @@ textarea {
     padding-bottom: 5%;
     height: auto;
     width: auto;
-    /* color: whitesmoke;
-    background-color: black;
-    border-radius: 20px; */
 }
