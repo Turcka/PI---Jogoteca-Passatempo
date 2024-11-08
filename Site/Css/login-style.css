@@ -8,6 +8,15 @@ form{
     padding-left: 18vw;
 }
 
+input{
+    margin-bottom: 16px;
+    width: 15vw;
+    border: none;
+    outline: none; 
+    font-size: 16px;
+    border-bottom: 2px solid black;
+}
+
 .container-login{
     justify-content: center;
     align-items: center;
@@ -19,7 +28,39 @@ form{
     align-items: center;
 }
 
+/* .backgroundForms{
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 20px;
+} */
+
 .titulo{
     padding-left: 21vw;
     padding-bottom: 3vh;
+}
+
+.btn-env{
+    padding: 3vh 0vw 2vh 0vw;
+}
+
+.enviar{
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    cursor: pointer;
+    position: relative;
+    border-radius: 30px;
+    height: 8vh;
+    width: 15vw;
+    transition: 0.4s ease-in-out;
+}
+
+.enviar:hover{
+    color: whitesmoke;
+    background-color: blue;
 }
