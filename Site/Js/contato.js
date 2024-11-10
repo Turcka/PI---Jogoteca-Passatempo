@@ -10,7 +10,7 @@ async function enviarContato() {
     let nome = nomeInput.value;
     let email = emailInput.value;
     let mensagem = mensagemInput.value;
-    await axios.post(URLcompleta, { nome, email, mensagem}).data;
+    await axios.post(URLcompleta, {nome, email, mensagem}).data;
 }
 
 function autoResize(textarea) {

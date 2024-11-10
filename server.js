@@ -1,9 +1,9 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const uniqueValidator = require ('mongoose-unique-validator')
-const bcrypt = require('bcrypt')
-const jwt = require ('jsonwebtoken')
+// const uniqueValidator = require ('mongoose-unique-validator')
+// const bcrypt = require('bcrypt')
+// const jwt = require ('jsonwebtoken')
 const app = express()
 app.use(express.json())
 app.use(cors())
@@ -21,15 +21,20 @@ const Contato = mongoose.model('Contato', mongoose.Schema({
 }))
 
 app.post('/contatos', async (req, res) => {
-    const nome = req.body.nome;
-    const email = req.body.email;
-    const mensagem = req.body.mensagem;
-    const contato = new Contato({nome: nome, email: email, mensagem: mensagem });
-    await contato.save()
-    const contatos = await Contato.find()
-    res.json(contatos)
-});
-
+    try {
+        const nome = req.body.nome;
+        const email = req.body.email;
+        const mensagem = req.body.mensagem;
+        const contato = new Contato({ nome: nome, email: email, mensagem: mensagem });
+        const resMongo = await contato.save()
+        console.log(resMongo)
+        res.status(201).end()
+    }
+    catch(e) {
+        console.log(e)
+        res.status(409).end()
+    }
+})
 
 app.listen (port, () => {
     try {
