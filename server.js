@@ -11,7 +11,7 @@ app.use(cors())
 const port = 3000
 
 async function conectarAoMongoDB() {
-    await mongoose.connect('mongodb+srv://Hidek1n:Passatempo123@cluster0.fx2ir.mongodb.net/PassatempoJogoteca')
+    await mongoose.connect('mongodb+srv://Hidek1n:Dsg0YOuBiJjHz9ms@cluster0.fx2ir.mongodb.net/PassatempoJogoteca')
 }
 
 const Contato = mongoose.model('Contato', mongoose.Schema({
@@ -20,23 +20,14 @@ const Contato = mongoose.model('Contato', mongoose.Schema({
     mensagem: {type: String} 
 }))
 
-app.get('/contato', async (req, res) => {
-    const contato = await Contato.find()
-    res.json(contato)
-})
-
-
-app.post('/contato', async (req, res) => {
+app.post('/contatos', async (req, res) => {
     const nome = req.body.nome;
     const email = req.body.email;
     const mensagem = req.body.mensagem;
-    try {  
-        let contato = new Contato({ nome, email, mensagem });
-        await contato.save();
-        res.status(201).json({ message: "Contato salvo com sucesso!" });
-    } catch (error) {
-        res.status(500).json({ message: "Erro ao salvar contato.", error });
-    }
+    const contato = new Contato({nome: nome, email: email, mensagem: mensagem });
+    await contato.save()
+    const contatos = await Contato.find()
+    res.json(contatos)
 });
 
 
