@@ -20,6 +20,13 @@ const Contato = mongoose.model('Contato', mongoose.Schema({
     mensagem: {type: String} 
 }))
 
+const usuarioSchema = mongoose.Schema({
+    login: {type: String, required: true, unique: true},
+    password: {type: String, required: true}
+})
+usuarioSchema.plugin(uniqueValidator)
+const Usuario = mongoose.model ("Usuario", usuarioSchema)
+
 app.post('/contatos', async (req, res) => {
     try {
         const nome = req.body.nome;
@@ -34,6 +41,25 @@ app.post('/contatos', async (req, res) => {
         console.log(e)
         res.status(409).end()
     }
+})
+
+app.post ('/login', async (req, res) => {
+    const login = req.body.login
+    const password = req.body.password
+    const usuarioExiste = await Usuario.findOne({login: login})
+    if (!usuarioExiste) {
+        return res.status(401).json({mensagem: "login inválido"})
+    }
+    const senhaValida = await bcrypt.compare (password, usuarioExiste.password)
+    if (!senhaValida) {
+        return res.status(401).json({mensagem: "senha inválida"})
+    }
+    const token = jwt.sign (
+        {login: login},
+        "id-secreto",
+        {expiresIn: "1h"}
+    )
+    res.status(200).json({token: token})
 })
 
 app.listen (port, () => {
