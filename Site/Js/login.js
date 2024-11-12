@@ -2,11 +2,10 @@ const protocolo = "http://";
 const baseURL = "localhost:3000";
 
 const fazerLogin = async () => {
-    let usuarioLoginInput = document.querySelector('#usuarioLoginInput')
-    let passwordLoginInput = document.querySelector('#passwordLoginInput')
+    let usuarioLoginInput = document.querySelector('#user')
+    let passwordLoginInput = document.querySelector('#password')
     let usuarioLogin = usuarioLoginInput.value
     let passwordLogin = passwordLoginInput.value
-    let modalLogin = bootstrap.Modal.getInstance(document.querySelector("#modalLogin"));
     if (usuarioLogin && passwordLogin) {
       try {
         const loginEndpoint = '/login'
@@ -19,11 +18,7 @@ const fazerLogin = async () => {
         usuarioLoginInput.value=""
         passwordLoginInput.value=""
         exibeAlerta('.alert-modal-login', "Usuário logado com sucesso", ['show', 'alert-success'], ['d-none'], 2000)
-        setTimeout(() => modalLogin.hide(), 2000)
-        const cadastrarFilmeButton = document.querySelector('#cadastrarFilmeButton')
-        cadastrarFilmeButton.disabled = false
-        const loginLink = document.querySelector('#loginLink')
-        loginLink.innerHTML = "Logout"
+        setTimeout(() => modalLogin.hide(), 2000)   
       }
       catch (e) {
         exibeAlerta('.alert-modal-login', "Falha na autenticação", ['show', 'alert-danger'], ['d-none'], 2000)
