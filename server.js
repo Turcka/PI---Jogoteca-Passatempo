@@ -1,9 +1,9 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
-// const uniqueValidator = require ('mongoose-unique-validator')
-// const bcrypt = require('bcrypt')
-// const jwt = require ('jsonwebtoken')
+const uniqueValidator = require ('mongoose-unique-validator')
+const bcrypt = require('bcrypt')
+const jwt = require ('jsonwebtoken')
 const app = express()
 app.use(express.json())
 app.use(cors())
@@ -11,23 +11,24 @@ app.use(cors())
 const port = 3000
 
 async function conectarAoMongoDB() {
-    await mongoose.connect('mongodb+srv://Hidek1n:Dsg0YOuBiJjHz9ms@cluster0.fx2ir.mongodb.net/PassatempoJogoteca')
+    await mongoose.connect("mongodb+srv://Hidek1n:Dsg0YOuBiJjHz9ms@cluster0.fx2ir.mongodb.net/PassatempoJogoteca")
 }
 
-const Contato = mongoose.model('Contato', mongoose.Schema({
+const Contato = mongoose.model("Contato", mongoose.Schema({
     nome: {type: String},
     email: {type: String},
     mensagem: {type: String} 
 }))
 
 const usuarioSchema = mongoose.Schema({
-    login: {type: String, required: true, unique: true},
+    user: {type: String, required: true, unique: true},
     password: {type: String, required: true}
 })
+
 usuarioSchema.plugin(uniqueValidator)
 const Usuario = mongoose.model ("Usuario", usuarioSchema)
 
-app.post('/contatos', async (req, res) => {
+app.post("/contatos", async (req, res) => {
     try {
         const nome = req.body.nome;
         const email = req.body.email;
@@ -43,10 +44,10 @@ app.post('/contatos', async (req, res) => {
     }
 })
 
-app.post ('/login', async (req, res) => {
-    const login = req.body.login
+app.post ("/usuarios", async (req, res) => {
+    const user = req.body.user
     const password = req.body.password
-    const usuarioExiste = await Usuario.findOne({login: login})
+    const usuarioExiste = await Usuario.findOne({user: user})
     if (!usuarioExiste) {
         return res.status(401).json({mensagem: "login inválido"})
     }

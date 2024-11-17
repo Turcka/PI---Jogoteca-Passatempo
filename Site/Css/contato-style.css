@@ -67,6 +67,10 @@ input{
     padding-bottom: 10vh;
 }
 
+.alert-contato{
+    margin-left: 130px !important;
+}
+
 .container-infos{
     padding: 14vh 5vw 0px 10vw;
     text-align: center;
