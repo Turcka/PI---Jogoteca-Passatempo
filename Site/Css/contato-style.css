@@ -18,21 +18,19 @@ form{
 }
 
 textarea {
-    padding-top: 10px;
     margin-bottom: 16px;
-    height: 4vh;
-    width: 25vw;
+    width: 450px;
     border: none;
-    outline: none;
     font-size: 16px;
     border-bottom: 2px solid black;
-    resize: none; 
+    outline: none !important;
+    resize: none !important; 
     max-height: 16vh;
 }
 
 input{
     margin-bottom: 16px;
-    width: 25vw;
+    width: 450px;
     border: none;
     outline: none; 
     font-size: 16px;
