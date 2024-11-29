@@ -29,9 +29,9 @@ article{
     padding-top: 3%;
 }
 
-/* .coluna-titulo{
-    padding-left: 100vw;
-}  */
+.coluna-titulo{
+    margin-left: 8%;
+} 
 
 .mapa{
     width: 100%;
@@ -55,7 +55,7 @@ article{
 
 .img{
     width: 100vw;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .seleTitulo{
