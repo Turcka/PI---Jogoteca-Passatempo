@@ -2,6 +2,8 @@
     display: flex;
     width: 100vw;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 form{
@@ -36,6 +38,13 @@ input{
     color: whitesmoke;
     border-radius: 20px;
 } */
+
+.content{
+    /* width: 20vw; */
+    padding-left: 16vw;
+    justify-content: center;
+    align-items: center;
+}
 
 .titulo{
     padding-left: 21vw;
