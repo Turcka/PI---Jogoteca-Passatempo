@@ -89,3 +89,19 @@ article{
     height: 80vh;
     z-index: -1;
 }
+
+.imagemNovaZelandia{
+    content: "";
+    position: flex;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background-attachment: fixed;
+    background-image: url(../Imagens/Mu_Torere.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    z-index: -1;
+}
