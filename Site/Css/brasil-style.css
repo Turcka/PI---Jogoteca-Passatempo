@@ -1,0 +1,22 @@
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.primeiraSec{
+    height: 80vh;
+}
+
+.infoBrinquedos{
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloSec{
+    width: 25vw;
+    align-items: center;
+    justify-content: center;
+}
