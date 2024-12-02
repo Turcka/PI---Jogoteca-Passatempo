@@ -20,4 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  document.getElementById('buscar').addEventListener('click', function () {
+
+    const paisSelecionado = document.getElementById('Pais').value;
+
+    if (paisSelecionado) {
+        window.location.href = paisSelecionado;
+    } else {
+        alert('Por favor, selecione um país.');
+    }
+});
   
