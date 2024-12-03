@@ -153,3 +153,40 @@ article{
     height: 80vh;
     z-index: -1;
 }
+/* 
+@media screen and (max-width: 1085px){
+    .infoBrinquedos{
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 860px){
+    .infoBrinquedos{
+        height: 125vh;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .infoBrinquedos{
+        height: 350vh;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .infoBrinquedos{
+        height: 550vh;
+    }
+    .segundaSec{
+        height: 150vh;
+    }
+}
+
+@media screen and (max-width: 190px){
+    .infoBrinquedos{
+        height: 1700vh;
+    }
+
+    .segundaSec{
+        height: 150vh;
+    }
+} */
