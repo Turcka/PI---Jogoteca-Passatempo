@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 80vh;
 }
 
 .jogotecaInfo{
@@ -26,12 +27,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10vh;
+    padding-top: 1vh;
 }
 
 .descricao{
     width: 50%;
-    padding-top: 5%;
+    padding-top: 2vh;
 }
 
 .segundaSec{
@@ -39,6 +40,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 80vh;
 }
 
 .salaDeAula{
@@ -46,7 +48,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10vh;
+    /* padding-top: 1vh; */
 }
 
 .artesaos{
@@ -56,4 +58,36 @@
     align-items: center;
     padding-top: 10vh;
     padding-bottom: 10vh;
+}
+
+.imagemOng{
+    content: "";
+    position: flex;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background-attachment: fixed;
+    background-image: url(../Imagens/OngFeliz.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    z-index: -1;
+}
+
+.imagemArtesao{
+    content: "";
+    position: flex;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background-attachment: fixed;
+    background-image: url(../Imagens/Artesao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    z-index: -1;
 }
