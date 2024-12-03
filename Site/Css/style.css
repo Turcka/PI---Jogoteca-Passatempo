@@ -66,6 +66,10 @@ nav a:hover::after{
     font-size: 150%;
 }
 
+.imgCabecalho{
+    height: 50px;
+}
+
 h1{
     font-size: 3rem;
 }
@@ -126,4 +130,30 @@ footer img:hover{
 .copyright{
     margin-top: 50px;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: 10vh; 
+        flex-wrap:nowrap; 
+        justify-content: center; 
+    }
+
+    nav ul {
+        flex-wrap: nowrap; 
+    }
+
+    nav li {
+        margin: 10px; 
+    }
+
+    .cabecalho{
+        font-size: 100%;
+        flex-wrap: nowrap;
+        padding-left: 25%;
+    }
+
+    .imgCabecalho{
+        height: 25px;
+    }
 }
