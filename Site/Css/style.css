@@ -133,6 +133,10 @@ footer img:hover{
 }
 
 @media screen and (max-width: 768px) {
+    p{
+        font-size: 0.8rem;
+    }
+
     nav {
         height: 10vh; 
         flex-wrap:nowrap; 
