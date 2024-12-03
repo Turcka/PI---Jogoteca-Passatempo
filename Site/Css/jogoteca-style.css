@@ -91,3 +91,41 @@
     height: 60vh;
     z-index: -1;
 }
+
+
+@media screen and (max-width: 1085px){
+    .primeiraSec{
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 860px){
+    .primeiraSec{
+        height: 125vh;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .primeiraSec{
+        height: 150vh;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .primeiraSec{
+        height: 250vh;
+    }
+    .segundaSec{
+        height: 150vh;
+    }
+}
+
+@media screen and (max-width: 190px){
+    .primeiraSec{
+        height: 300vh;
+    }
+
+    .segundaSec{
+        height: 150vh;
+    }
+}
