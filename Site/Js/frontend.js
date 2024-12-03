@@ -47,6 +47,8 @@ const fazerLogin = async () => {
         usuarioLoginInput.value=""
         passwordLoginInput.value=""
         exibeAlerta('.alert-login', "Usuário logado com sucesso", ['show', 'alert-success'], ['d-none'], 2000)
+        const loginButton = document.querySelector('#loginButton')
+        loginButton.innerHTML = "Logout"
       }
       catch (e) {
         exibeAlerta('.alert-login', "Falha na autenticação", ['show', 'alert-danger'], ['d-none'], 2000)
@@ -57,7 +59,7 @@ const fazerLogin = async () => {
         ".alert-login", "Preencha todos os campos!!!", ["show", "alert-danger"], ["d-none"], 2000)
     }
   }
-  
+
   function autoResize(textarea) {
     textarea.style.height = 'auto'
     textarea.style.height = textarea.scrollHeight + 'px'

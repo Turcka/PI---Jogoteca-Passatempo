@@ -7,11 +7,14 @@ const jwt = require ('jsonwebtoken')
 const app = express()
 app.use(express.json())
 app.use(cors())
+require("dotenv").config()
 
-const port = 3000
+const port = 3000 
+
+const connect_string = process.env.db_connect
 
 async function conectarAoMongoDB() {
-    await mongoose.connect("mongodb+srv://Hidek1n:Dsg0YOuBiJjHz9ms@cluster0.fx2ir.mongodb.net/PassatempoJogoteca")
+    await mongoose.connect(connect_string)
 }
 
 const Contato = mongoose.model("Contato", mongoose.Schema({
