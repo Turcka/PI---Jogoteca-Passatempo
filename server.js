@@ -65,9 +65,14 @@ app.post("/login", async (req, res) => {
             "chave-secreta",
             {expiresIn: "1h"}
         )
-        consta = await usuarioExiste.updateOne({ adm: "True" })
+        await usuarioExiste.updateOne({ adm: "True" })
         res.status(200).json({token: token})
     }
+})
+
+app.post("/logout", async (req, res) => {
+    const user = await Usuario.updateOne({ adm: "False" })
+    res.status(200).json({user})
 })
 
 app.get('/login', async (req, res) => {

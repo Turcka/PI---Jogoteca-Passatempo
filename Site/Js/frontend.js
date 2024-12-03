@@ -85,11 +85,17 @@ async function obterContato() {
   exibirMensagens(contato);
 }
 
+async function fazerLogout() {
+  const logoutEndpoint = "/logout";
+  const URLcompleta = `${protocolo}${baseURL}${logoutEndpoint}`;
+  (await axios.post(URLcompleta)).data;
+}
+
 async function admPageLogin() {
-  const filmesEndpoint = "/login";
-  const URLcompleta = `${protocolo}${baseURL}${filmesEndpoint}`;
+  const loginEndpoint = "/login";
+  const URLcompleta = `${protocolo}${baseURL}${loginEndpoint}`;
   const adm = (await axios.get(URLcompleta)).data;
-  if (adm[0] = "True") {
+  if (adm.includes("True")) {
     const loginLink = document.querySelector('.titulo')
     loginLink.innerHTML = "ADM"
     const userText = document.querySelector('.userText')
@@ -112,12 +118,9 @@ async function admPageLogin() {
     var botao = document.createElement("button");
     botao.innerHTML = "Logout";
     botao.classList.add("enviar")
-    botao.onclick = function () {
-      alert("Botão clicado!");
-    };
+    botao.onclick = fazerLogout()
     var container = document.getElementById("btn-log");
     container.appendChild(botao);
-
   }
 }
 
