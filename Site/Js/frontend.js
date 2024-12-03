@@ -34,18 +34,15 @@ async function enviarContato() {
 }
 
 const fazerLogin = async () => {
+    const loginEndpoint = "/login"
+    const URLcompleta = `${protocolo}${baseURL}${loginEndpoint}`
     let usuarioLoginInput = document.querySelector('#usuarioLoginInput')
     let passwordLoginInput = document.querySelector('#passwordLoginInput')
     let usuarioLogin = usuarioLoginInput.value
     let passwordLogin = passwordLoginInput.value
     if (usuarioLogin && passwordLogin) {
       try {
-        const loginEndpoint = "/login"
-        const URLcompleta = `${protocolo}${baseURL}${loginEndpoint}`
-        const response = await axios.post(
-          URLcompleta,
-          {user: usuarioLogin, password: passwordLogin}
-        )
+        const response = await axios.post(URLcompleta,{ user: usuarioLogin, password: passwordLogin})
         localStorage.setItem("token", response.data)
         usuarioLoginInput.value=""
         passwordLoginInput.value=""
@@ -60,7 +57,7 @@ const fazerLogin = async () => {
         ".alert-login", "Preencha todos os campos!!!", ["show", "alert-danger"], ["d-none"], 2000)
     }
   }
-
+  
   function autoResize(textarea) {
     textarea.style.height = 'auto'
     textarea.style.height = textarea.scrollHeight + 'px'

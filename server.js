@@ -44,7 +44,7 @@ app.post("/contatos", async (req, res) => {
     }
 })
 
-app.post('/login', async (req, res) => {
+app.post("/login", async (req, res) => {
     const user = req.body.user
     const password = req.body.password
     const usuarioExiste = await Usuario.findOne({user: user})
