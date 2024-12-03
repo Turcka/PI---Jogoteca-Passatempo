@@ -30,17 +30,7 @@ input{
     align-items: center;
 }
 
-/* .backgroundForms{
-    position: relative;
-    width: 50vw;
-    height: 50vh;
-    background-color: black;
-    color: whitesmoke;
-    border-radius: 20px;
-} */
-
 .content{
-    /* width: 20vw; */
     padding-left: 16vw;
     justify-content: center;
     align-items: center;
@@ -72,4 +62,8 @@ input{
 .enviar:hover{
     color: whitesmoke;
     background-color: blue;
+}
+
+.alert-login{
+    padding-left: 330px;
 }

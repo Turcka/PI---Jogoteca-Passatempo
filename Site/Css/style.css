@@ -86,7 +86,7 @@ p{
 
 footer{
     text-align: center;
-    background-color: blue;
+    background-color: rgb(0, 0, 150);
     padding-top: 5vh;
     padding-bottom: 5vh;
     z-index: 2;
@@ -125,4 +125,5 @@ footer img:hover{
 
 .copyright{
     margin-top: 50px;
+    color: white;
 }

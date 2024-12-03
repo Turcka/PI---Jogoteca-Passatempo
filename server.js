@@ -44,23 +44,25 @@ app.post("/contatos", async (req, res) => {
     }
 })
 
-app.post ("/usuarios", async (req, res) => {
+app.post('/login', async (req, res) => {
     const user = req.body.user
     const password = req.body.password
     const usuarioExiste = await Usuario.findOne({user: user})
     if (!usuarioExiste) {
-        return res.status(401).json({mensagem: "login inválido"})
+        return res.status(401).json({mensagem: "login invalido"})
     }
-    const senhaValida = await bcrypt.compare (password, usuarioExiste.password)
-    if (!senhaValida) {
-        return res.status(401).json({mensagem: "senha inválida"})
+    else {
+        const senhaCorreta = await bcrypt.compare(password, usuarioExiste.password)
+        if (!senhaCorreta) {
+            return res.status(401).json({mensagem: "senha inválida"})
+        }
+        const token = jwt.sign(
+            {user: user},
+            "chave-secreta",
+            {expiresIn: "1h"}
+        )
+        res.status(200).json({token: token})
     }
-    const token = jwt.sign (
-        {login: login},
-        "id-secreto",
-        {expiresIn: "1h"}
-    )
-    res.status(200).json({token: token})
 })
 
 app.listen (port, () => {
