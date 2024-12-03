@@ -25,7 +25,8 @@ const Contato = mongoose.model("Contato", mongoose.Schema({
 
 const usuarioSchema = mongoose.Schema({
     user: {type: String, required: true, unique: true},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
+    adm:{type: String}
 })
 
 usuarioSchema.plugin(uniqueValidator)
@@ -64,8 +65,20 @@ app.post("/login", async (req, res) => {
             "chave-secreta",
             {expiresIn: "1h"}
         )
+        consta = await usuarioExiste.updateOne({ adm: "True" })
         res.status(200).json({token: token})
     }
+})
+
+app.get('/login', async (req, res) => {
+    const usuarios = await Usuario.find()
+    const valoresAdm = usuarios.map(usuario => usuario.adm)
+    res.json(valoresAdm)
+})
+
+app.get('/contatos', async (req, res) => {
+    const contatos = await Contato.find()
+    res.json(contatos)
 })
 
 app.listen (port, () => {

@@ -41,10 +41,13 @@ input{
     padding-bottom: 3vh;
 }
 
-.btn-ent{
+.btn-ent {
     padding: 3vh 0vw 2vh 0vw;
 }
 
+.btn-log {
+    padding: 3vh 0vw 5vh 16vw;
+}
 .enviar{
     border: none;
     outline: none;
@@ -66,4 +69,13 @@ input{
 
 .alert-login{
     padding-left: 330px;
+}
+
+.mensagem td {
+    max-width: 200px;
+    white-space: normal;
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
