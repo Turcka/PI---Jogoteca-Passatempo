@@ -98,6 +98,23 @@ async function fazerLogout() {
   (await axios.post(URLcompleta)).data;
 }
 
+async function editarTexto() {
+  const textosEndpoint = "/texto";
+  const URLcompleta = `${protocolo}${baseURL}${textosEndpoint}`;
+  axios.post(URLcompleta, { id: 1, text: document.getElementById("inputT1").value}).data
+  axios.post(URLcompleta, { id: 2, text: document.getElementById("inputT1p1").value}).data
+  axios.post(URLcompleta, { id: 3, text: document.getElementById("inputT1p2").value}).data
+  axios.post(URLcompleta, { id: 4, text: document.getElementById("inputT1p3").value}).data
+  axios.post(URLcompleta, { id: 5, text: document.getElementById("inputT1p4").value}).data
+  axios.post(URLcompleta, { id: 6, text: document.getElementById("inputT2").value}).data
+  axios.post(URLcompleta, { id: 7, text: document.getElementById("inputT2p1").value}).data
+  axios.post(URLcompleta, { id: 8, text: document.getElementById("inputT2p2").value}).data
+  axios.post(URLcompleta, { id: 9, text: document.getElementById("inputT2p3").value}).data
+  axios.post(URLcompleta, { id: 10, text: document.getElementById("inputT3").value}).data
+  axios.post(URLcompleta, { id: 11, text: document.getElementById("inputT3p1").value}).data
+  axios.post(URLcompleta, { id: 12, text: document.getElementById("inputT3p2").value}).data
+}
+
 async function admPageLogin() {
   const loginEndpoint = "/login";
   const URLcompleta = `${protocolo}${baseURL}${loginEndpoint}`;
@@ -168,6 +185,7 @@ async function admPageIndex() {
     botao.innerHTML = "Editar";
     botao.classList.add("enviar")
     var containerBtnLog = document.getElementById("btn-edit");
+    botao.onclick = editarTexto
     containerBtnLog.appendChild(botao);
     var inputT1 = document.createElement("textarea");
     inputT1.type = "text";

@@ -24,9 +24,13 @@ const Contato = mongoose.model("Contato", mongoose.Schema({
 }))
 
 const Texto = mongoose.model("Texto", mongoose.Schema({
+
+const textoSchema = mongoose.Schema({
     id: {type: Number},
     text: {type: String},
-}))
+})
+
+const Texto = mongoose.model("Texto", textoSchema)
 
 const usuarioSchema = mongoose.Schema({
     user: {type: String, required: true, unique: true},
@@ -89,6 +93,17 @@ app.get('/login', async (req, res) => {
 app.get('/contatos', async (req, res) => {
     const contatos = await Contato.find()
     res.json(contatos)
+})
+
+app.post('/texto', async (req, res) => {
+    const id = req.body.id;
+    const text = req.body.text;
+    const idExiste = await Texto.findOne({id: id})
+    if (!idExiste) {
+        return res.status(401).json({mensagem: "id não existe"})
+    }
+    const a = await idExiste.updateOne({ text: text })
+    res.json(a)
 })
 
 app.get('/texto', async (req, res) => {
