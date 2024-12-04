@@ -92,6 +92,13 @@
     z-index: -1;
 }
 
+.admCentro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media screen and (max-width: 1085px){
     .primeiraSec{
