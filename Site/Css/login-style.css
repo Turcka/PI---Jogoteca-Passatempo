@@ -87,5 +87,22 @@ input{
 .th-add{
     display:table-row;
 }
-  
+
+@media screen and (max-width: 430px){
+    .backgroundForms{
+        padding-left: 20%;
+    }
+
+    .forms{
+        padding-left: 7%;
+    }
+
+    .btn-ent{
+        padding-left: 7%;
+    }
+
+    .enviar{
+        font-size: 4vw;
+    }
+}
   
