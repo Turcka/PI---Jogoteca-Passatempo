@@ -130,3 +130,33 @@
         height: 150vh;
     }
 }
+
+.enviar{
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    cursor: pointer;
+    position: relative;
+    border-radius: 30px;
+    height: 8vh;
+    width: 15vw;
+    transition: 0.4s ease-in-out;
+}
+
+.enviar:hover{
+    color: whitesmoke;
+    background-color: blue;
+}
+
+textarea {
+    width: 930px;
+    height: 120px;
+    resize: none !important; 
+}
+
+.titulo{
+    text-align: center ;
+    height: 70px;
+}

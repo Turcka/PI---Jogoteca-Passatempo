@@ -23,6 +23,11 @@ const Contato = mongoose.model("Contato", mongoose.Schema({
     mensagem: {type: String} 
 }))
 
+const Texto = mongoose.model("Texto", mongoose.Schema({
+    id: {type: Number},
+    text: {type: String},
+}))
+
 const usuarioSchema = mongoose.Schema({
     user: {type: String, required: true, unique: true},
     password: {type: String, required: true},
@@ -65,8 +70,8 @@ app.post("/login", async (req, res) => {
             "chave-secreta",
             {expiresIn: "1h"}
         )
-        await usuarioExiste.updateOne({ adm: "True" })
-        res.status(200).json({token: token})
+        const a = await usuarioExiste.updateOne({ adm: "True" })
+        res.status(200).json({token: token, a})
     }
 })
 
@@ -84,6 +89,11 @@ app.get('/login', async (req, res) => {
 app.get('/contatos', async (req, res) => {
     const contatos = await Contato.find()
     res.json(contatos)
+})
+
+app.get('/texto', async (req, res) => {
+    const textos = await Texto.find()
+    res.json(textos)
 })
 
 app.listen (port, () => {

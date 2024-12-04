@@ -85,6 +85,13 @@ async function obterContato() {
   exibirMensagens(contato);
 }
 
+async function obterTexto() {
+  const textosEndpoint = "/texto";
+  const URLcompleta = `${protocolo}${baseURL}${textosEndpoint}`;
+  const resposta = await axios.get(URLcompleta);
+  return resposta.data;
+}
+
 async function fazerLogout() {
   const logoutEndpoint = "/logout";
   const URLcompleta = `${protocolo}${baseURL}${logoutEndpoint}`;
@@ -107,20 +114,159 @@ async function admPageLogin() {
     const passwordInput = document.getElementById("passwordLoginInput")
     passwordInput.style.display = "none";
     const entrarButton = document.getElementById("loginButton")
-    const nameMsg = document.getElementById("nameMsg")
-    nameMsg.innerHTML = "Nome"
-    const emailMsg = document.getElementById("emailMsg")
-    emailMsg.innerHTML = "Email"
-    const msgMsg = document.getElementById("msgMsg")
-    msgMsg.innerHTML = "Mensagem"
     entrarButton.remove()
+    const nameMsg = document.getElementById("nameMsg")
+    nameMsg.classList.remove("th-login")
+    nameMsg.innerHTML = "Nome"
+    const msgMsg = document.getElementById("msgMsg")
+    msgMsg.classList.remove("th-login")
+    msgMsg.innerHTML = "Mensagem"
+    const emailMsg = document.getElementById("emailMsg")
+    emailMsg.classList.remove("th-login")
+    emailMsg.innerHTML = "Email"
     obterContato()
     var botao = document.createElement("button");
     botao.innerHTML = "Logout";
     botao.classList.add("enviar")
-    botao.onclick = fazerLogout()
-    var container = document.getElementById("btn-log");
-    container.appendChild(botao);
+    botao.onclick = fazerLogout
+    var containerBtnLog = document.getElementById("btn-log");
+    containerBtnLog.appendChild(botao);
   }
 }
 
+async function admPageIndex() {
+  const loginEndpoint = "/login";
+  const URLcompleta = `${protocolo}${baseURL}${loginEndpoint}`;
+  const adm = (await axios.get(URLcompleta)).data;
+  const textos = await obterTexto()
+  const t1 = document.getElementById("t1");
+  t1.innerHTML = textos.find(item => item.id === 1).text;
+  const t1p1 = document.getElementById("t1p1");
+  t1p1.innerHTML = textos.find(item => item.id === 2).text;
+  const t1p2 = document.getElementById("t1p2");
+  t1p2.innerHTML = textos.find(item => item.id === 3).text;
+  const t1p3 = document.getElementById("t1p3");
+  t1p3.innerHTML = textos.find(item => item.id === 4).text;
+  const t1p4 = document.getElementById("t1p4");
+  t1p4.innerHTML = textos.find(item => item.id === 5).text;
+  const t2 = document.getElementById("t2");
+  t2.innerHTML = textos.find(item => item.id === 6).text;
+  const t2p1 = document.getElementById("t2p1");
+  t2p1.innerHTML = textos.find(item => item.id === 7).text;
+  const t2p2 = document.getElementById("t2p2");
+  t2p2.innerHTML = textos.find(item => item.id === 8).text;
+  const t2p3 = document.getElementById("t2p3");
+  t2p3.innerHTML = textos.find(item => item.id === 9).text;
+  const t3 = document.getElementById("t3");
+  t3.innerHTML = textos.find(item => item.id === 10).text;
+  const t3p1 = document.getElementById("t3p1");
+  t3p1.innerHTML = textos.find(item => item.id === 11).text;
+  const t3p2 = document.getElementById("t3p2");
+  t3p2.innerHTML = textos.find(item => item.id === 12).text;
+  if (adm.includes("True")) {
+    var botao = document.createElement("button");
+    botao.innerHTML = "Editar";
+    botao.classList.add("enviar")
+    var containerBtnLog = document.getElementById("btn-edit");
+    containerBtnLog.appendChild(botao);
+    var inputT1 = document.createElement("textarea");
+    inputT1.type = "text";
+    inputT1.id = "inputT1"; 
+    inputT1.name = "inputT1"; 
+    inputT1.classList.add("titulo")
+    inputT1.value = textos.find(item => item.id === 1).text;;
+    const t1 = document.getElementById("t1");
+    t1.innerHTML = ""
+    t1.appendChild(inputT1);
+    var inputT1p1 = document.createElement("textarea");
+    inputT1p1.type = "text";
+    inputT1p1.id = "inputT1p1"; 
+    inputT1p1.name = "inputT1p1"; 
+    inputT1p1.value = textos.find(item => item.id === 2).text;;
+    const t1p1 = document.getElementById("t1p1");
+    t1p1.innerHTML = ""
+    t1p1.appendChild(inputT1p1);
+    var inputT1p2 = document.createElement("textarea");
+    inputT1p2.type = "text";
+    inputT1p2.id = "inputT1p2"; 
+    inputT1p2.name = "inputT1p2"; 
+    inputT1p2.value = textos.find(item => item.id === 3).text;;
+    const t1p2 = document.getElementById("t1p2");
+    t1p2.innerHTML = ""
+    t1p2.appendChild(inputT1p2);
+    var inputT1p3 = document.createElement("textarea");
+    inputT1p3.type = "text";
+    inputT1p3.id = "inputT1p3"; 
+    inputT1p3.name = "inputT1p3"; 
+    inputT1p3.value = textos.find(item => item.id === 4).text;;
+    const t1p3 = document.getElementById("t1p3");
+    t1p3.innerHTML = ""
+    t1p3.appendChild(inputT1p3);
+    var inputT1p4 = document.createElement("textarea");
+    inputT1p4.type = "text";
+    inputT1p4.id = "inputT1p4"; 
+    inputT1p4.name = "inputT1p4"; 
+    inputT1p4.value = textos.find(item => item.id === 5).text;;
+    const t1p4 = document.getElementById("t1p4");
+    t1p4.innerHTML = ""
+    t1p4.appendChild(inputT1p4);
+    var inputT2 = document.createElement("textarea");
+    inputT2.type = "text";
+    inputT2.id = "inputT2"; 
+    inputT2.name = "inputT2"; 
+    inputT2.classList.add("titulo")
+    inputT2.value = textos.find(item => item.id === 6).text;;
+    const t2 = document.getElementById("t2");
+    t2.innerHTML = ""
+    t2.appendChild(inputT2);
+    var inputT2p1 = document.createElement("textarea");
+    inputT2p1.type = "text";
+    inputT2p1.id = "inputT2p1"; 
+    inputT2p1.name = "inputT2p1"; 
+    inputT2p1.value = textos.find(item => item.id === 7).text;;
+    const t2p1 = document.getElementById("t2p1");
+    t2p1.innerHTML = ""
+    t2p1.appendChild(inputT2p1);
+    var inputT2p2 = document.createElement("textarea");
+    inputT2p2.type = "text";
+    inputT2p2.id = "inputT2p2"; 
+    inputT2p2.name = "inputT2p2"; 
+    inputT2p2.value = textos.find(item => item.id === 8).text;;
+    const t2p2 = document.getElementById("t2p2");
+    t2p2.innerHTML = ""
+    t2p2.appendChild(inputT2p2);
+    var inputT2p3 = document.createElement("textarea");
+    inputT2p3.type = "text";
+    inputT2p3.id = "inputT2p3"; 
+    inputT2p3.name = "inputT2p3"; 
+    inputT2p3.value = textos.find(item => item.id === 9).text;;
+    const t2p3 = document.getElementById("t2p3");
+    t2p3.innerHTML = ""
+    t2p3.appendChild(inputT2p3)
+    var inputT3 = document.createElement("textarea");
+    inputT3.type = "text";
+    inputT3.id = "inputT3"; 
+    inputT3.name = "inputT3"; 
+    inputT3.classList.add("titulo")
+    inputT3.value = textos.find(item => item.id === 10).text;;
+    const t3 = document.getElementById("t3");
+    t3.innerHTML = ""
+    t3.appendChild(inputT3)
+    var inputT3p1 = document.createElement("textarea");
+    inputT3p1.type = "text";
+    inputT3p1.id = "inputT3p1"; 
+    inputT3p1.name = "inputT3p1"; 
+    inputT3p1.value = textos.find(item => item.id === 11).text;;
+    const t3p1 = document.getElementById("t3p1");
+    t3p1.innerHTML = ""
+    t3p1.appendChild(inputT3p1);
+    var inputT3p2 = document.createElement("textarea");
+    inputT3p2.type = "text";
+    inputT3p2.id = "inputT3p2"; 
+    inputT3p2.name = "inputT3p2"; 
+    inputT3p2.value = textos.find(item => item.id === 12).text;;
+    const t3p2 = document.getElementById("t3p2");
+    t3p2.innerHTML = ""
+    t3p2.appendChild(inputT3p2);
+  }
+}

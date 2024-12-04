@@ -79,3 +79,13 @@ input{
     overflow: hidden; 
     text-overflow: ellipsis; 
 }
+
+.th-login{
+    display: none;
+}
+
+.th-add{
+    display:table-row;
+}
+  
+  
