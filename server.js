@@ -23,7 +23,6 @@ const Contato = mongoose.model("Contato", mongoose.Schema({
     mensagem: {type: String} 
 }))
 
-const Texto = mongoose.model("Texto", mongoose.Schema({
 
 const textoSchema = mongoose.Schema({
     id: {type: Number},
