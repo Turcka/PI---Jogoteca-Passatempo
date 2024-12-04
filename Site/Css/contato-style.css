@@ -19,7 +19,7 @@ form{
 
 textarea {
     margin-bottom: 16px;
-    width: 450px;
+    width: 100%;
     border: none;
     font-size: 16px;
     border-bottom: 2px solid black;
@@ -30,7 +30,7 @@ textarea {
 
 input{
     margin-bottom: 16px;
-    width: 450px;
+    width: 100%;
     border: none;
     outline: none; 
     font-size: 16px;
@@ -99,4 +99,36 @@ input{
     padding-bottom: 5%;
     height: auto;
     width: auto;
+}
+
+@media screen and (max-width: 430px){
+    textarea{
+        width: 70%;
+    }
+
+    input{
+        width: 70%;
+    }
+
+    .tituloMsg{
+        font-size: 1rem;
+    }
+
+    .enviar{
+        font-size: 5vw;
+    }
+
+    .titulo{
+        font-size: 2rem;
+        padding: 16vh 0px 0px 4vw;
+    }
+
+    .maps{
+        width: 25vw;
+        height: 25vh;
+    }
+
+    .infos{
+        padding-right: 25%;
+    }
 }
