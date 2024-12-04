@@ -153,40 +153,105 @@ article{
     height: 80vh;
     z-index: -1;
 }
-/* 
+
+@media screen and (max-width: 1628px){
+    .primeiraSec{
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width: 1345px){
+    .primeiraSec{
+        height: 150vh;
+    }
+
+    .segundaSec{
+        height: 200vh;
+    }
+}
+
 @media screen and (max-width: 1085px){
-    .infoBrinquedos{
-        height: 100vh;
+    .primeiraSec{
+        height: 180vh;
+    }
+
+    .segundaSec{
+        height: 210vh;
+    }
+}
+
+@media screen and (max-width: 925px){
+    .primeiraSec{
+        height: 200vh;
+    }
+
+    .segundaSec{
+        height: 220vh;
     }
 }
 
 @media screen and (max-width: 860px){
-    .infoBrinquedos{
-        height: 125vh;
+    .primeiraSec{
+        height: 220vh;
+    }
+
+    .segundaSec{
+        height: 230vh;
     }
 }
 
 @media screen and (max-width: 768px){
-    .infoBrinquedos{
+    .primeiraSec{
+        height: 200vh;
+    }
+
+    .segundaSec{
+        height: 250vh;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .primeiraSec{
+        height: 300vh;
+    }
+    .segundaSec{
         height: 350vh;
     }
 }
 
 @media screen and (max-width: 300px){
-    .infoBrinquedos{
-        height: 550vh;
+    .primeiraSec{
+        height: 750vh;
     }
     .segundaSec{
-        height: 150vh;
+        height: 480vh;
     }
 }
 
 @media screen and (max-width: 190px){
+    .primeiraSec{
+        height: 800vh;
+    }
+
     .infoBrinquedos{
-        height: 1700vh;
+        padding-top: 2vh;
     }
 
     .segundaSec{
-        height: 150vh;
+        height: 500vh;
     }
-} */
+}
+
+@media screen and (max-width: 175px){
+    .primeiraSec{
+        height: 900vh;
+    }
+
+    .infoBrinquedos{
+        padding-top: 2vh;
+    }
+
+    .segundaSec{
+        height: 550vh;
+    }
+}
