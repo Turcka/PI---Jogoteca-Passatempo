@@ -160,3 +160,12 @@ textarea {
     text-align: center ;
     height: 70px;
 }
+
+@media screen and (max-width: 430px) {
+    .background {
+        background-attachment: scroll; 
+        background-position: center center; 
+        /* width: 100vw; */
+        height: 80vh;
+    }
+}

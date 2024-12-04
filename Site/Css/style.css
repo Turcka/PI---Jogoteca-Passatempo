@@ -162,3 +162,28 @@ footer img:hover{
     }
 }
 
+@media screen and (max-width: 432px) {
+    .imagemNav{
+        width: auto;
+        margin-left: 0.2%;
+        margin-top: 0.25%;
+    }
+
+    .imagemNav img{
+        height: 5vh;
+    }
+
+    .cabecalho{
+        flex-wrap: wrap;
+        padding-left: 10%;
+        font-size: 80%;
+    }
+
+    nav li {
+        margin-right: 0.7%; 
+    }
+
+    nav{
+        width: 85%;
+    }
+}
