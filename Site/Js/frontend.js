@@ -113,6 +113,9 @@ async function editarTexto() {
   axios.post(URLcompleta, { id: 10, text: document.getElementById("inputT3").value}).data
   axios.post(URLcompleta, { id: 11, text: document.getElementById("inputT3p1").value}).data
   axios.post(URLcompleta, { id: 12, text: document.getElementById("inputT3p2").value}).data
+  axios.post(URLcompleta, { id: 13, text: document.getElementById("inputImg1").value}).data
+  axios.post(URLcompleta, { id: 14, text: document.getElementById("inputImg2").value}).data
+  axios.post(URLcompleta, { id: 15, text: document.getElementById("inputImg3").value}).data
 }
 
 async function admPageLogin() {
@@ -153,9 +156,15 @@ async function admPageLogin() {
 
 async function admPageIndex() {
   const loginEndpoint = "/login";
-  const URLcompleta = `${protocolo}${baseURL}${loginEndpoint}`;
-  const adm = (await axios.get(URLcompleta)).data;
+  const URLcompletaLogin = `${protocolo}${baseURL}${loginEndpoint}`;
+  const adm = (await axios.get(URLcompletaLogin)).data;
   const textos = await obterTexto()
+  const img1 = document.getElementById("background");
+  img1.style.backgroundImage = "url('"+textos.find(item => item.id === 13).text+"')";
+  const img2 = document.getElementById("imagemOng");
+  img2.style.backgroundImage = "url('"+textos.find(item => item.id === 14).text+"')";
+  const img3 = document.getElementById("imagemArtesao");
+  img3.style.backgroundImage = "url('"+textos.find(item => item.id === 15).text+"')";
   const t1 = document.getElementById("t1");
   t1.innerHTML = textos.find(item => item.id === 1).text;
   const t1p1 = document.getElementById("t1p1");
@@ -193,6 +202,27 @@ async function admPageIndex() {
     var containerBtnLog = document.getElementById("btn-edit");
     botao.onclick = editarTexto
     containerBtnLog.appendChild(botao);
+    var inputImg1 = document.createElement("textarea");
+    inputImg1.id = "inputImg1"; 
+    inputImg1.name = "inputImg1"; 
+    inputImg1.classList.add("titulo")
+    inputImg1.value = textos.find(item => item.id === 13).text;
+    const img1 = document.getElementById("img1");
+    img1.appendChild(inputImg1);
+    var inputImg2 = document.createElement("textarea");
+    inputImg2.id = "inputImg2"; 
+    inputImg2.name = "inputImg2"; 
+    inputImg2.classList.add("titulo")
+    inputImg2.value = textos.find(item => item.id === 14).text;
+    const img2 = document.getElementById("img2");
+    img2.appendChild(inputImg2);
+    var inputImg3 = document.createElement("textarea");
+    inputImg3.id = "inputImg3"; 
+    inputImg3.name = "inputImg3"; 
+    inputImg3.classList.add("titulo")
+    inputImg3.value = textos.find(item => item.id === 15).text;
+    const img3 = document.getElementById("img3");
+    img3.appendChild(inputImg3);
     var inputT1 = document.createElement("textarea");
     inputT1.type = "text";
     inputT1.id = "inputT1"; 

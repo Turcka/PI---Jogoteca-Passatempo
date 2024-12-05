@@ -113,6 +113,26 @@
     align-items: center; 
 }
 
+.inputCentro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.inputCentro2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.inputCentro3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
 
 
 @media screen and (max-width: 1085px){
