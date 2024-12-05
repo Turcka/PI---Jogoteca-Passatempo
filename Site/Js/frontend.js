@@ -181,6 +181,12 @@ async function admPageIndex() {
   const t3p2 = document.getElementById("t3p2");
   t3p2.innerHTML = textos.find(item => item.id === 12).text;
   if (adm.includes("True")) {
+    const admCentro = document.querySelector('.admCentro');
+    admCentro.style.alignItems = 'flex-start';
+    const admCentro2 = document.querySelector('.admCentro2');
+    admCentro2.style.alignItems = 'flex-start';
+    const admCentro3 = document.querySelector('.admCentro3');
+    admCentro3.style.alignItems = 'flex-start';
     var botao = document.createElement("button");
     botao.innerHTML = "Editar";
     botao.classList.add("enviar")
@@ -199,7 +205,7 @@ async function admPageIndex() {
     var inputT1p1 = document.createElement("textarea");
     inputT1p1.type = "text";
     inputT1p1.id = "inputT1p1"; 
-    inputT1p1.name = "inputT1p1"; 
+    inputT1p1.name = "inputT1p1";
     inputT1p1.value = textos.find(item => item.id === 2).text;;
     const t1p1 = document.getElementById("t1p1");
     t1p1.innerHTML = ""
