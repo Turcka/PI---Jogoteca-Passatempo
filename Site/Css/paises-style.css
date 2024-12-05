@@ -156,7 +156,11 @@ article{
 
 @media screen and (max-width: 1628px){
     .primeiraSec{
-        height: 120vh;
+        height: 165vh;
+    }
+
+    .segundaSec{
+        height: 250vh;
     }
 }
 
@@ -166,7 +170,7 @@ article{
     }
 
     .segundaSec{
-        height: 200vh;
+        height: 280vh;
     }
 }
 
@@ -176,7 +180,7 @@ article{
     }
 
     .segundaSec{
-        height: 210vh;
+        height: 280vh;
     }
 }
 
@@ -186,7 +190,7 @@ article{
     }
 
     .segundaSec{
-        height: 220vh;
+        height: 280vh;
     }
 }
 
@@ -196,7 +200,7 @@ article{
     }
 
     .segundaSec{
-        height: 230vh;
+        height: 280vh;
     }
 }
 
@@ -206,13 +210,13 @@ article{
     }
 
     .segundaSec{
-        height: 270vh;
+        height: 300vh;
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 470px){
     .primeiraSec{
-        height: 300vh;
+        height: 350vh;
     }
     .segundaSec{
         height: 350vh;
@@ -224,7 +228,7 @@ article{
         height: 750vh;
     }
     .segundaSec{
-        height: 480vh;
+        height: 500vh;
     }
 }
 
@@ -238,7 +242,7 @@ article{
     }
 
     .segundaSec{
-        height: 500vh;
+        height: 550vh;
     }
 }
 
@@ -252,6 +256,6 @@ article{
     }
 
     .segundaSec{
-        height: 550vh;
+        height: 650vh;
     }
 }
