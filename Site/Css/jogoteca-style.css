@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 .jogotecaInfo{
@@ -137,19 +137,19 @@
 
 @media screen and (max-width: 1085px){
     .primeiraSec{
-        height: 100vh;
+        height: 130vh;
     }
 }
 
 @media screen and (max-width: 860px){
     .primeiraSec{
-        height: 125vh;
+        height: 150vh;
     }
 }
 
 @media screen and (max-width: 768px){
     .primeiraSec{
-        height: 150vh;
+        height: 180vh;
     }
 }
 
