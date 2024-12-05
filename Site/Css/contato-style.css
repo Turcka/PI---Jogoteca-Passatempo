@@ -132,3 +132,9 @@ input{
         padding-right: 25%;
     }
 }
+
+    @media screen and (max-width: 550px){
+        .enviar{
+            font-size: 3.5vw;
+        }
+    }

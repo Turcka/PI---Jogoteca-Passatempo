@@ -105,4 +105,22 @@ input{
         font-size: 4vw;
     }
 }
+
+@media screen and (max-width: 760px){
+    .backgroundForms{
+        padding-left: 20%;
+    }
+
+    .forms{
+        padding-left: 5.5%;
+    }
+
+    .btn-ent{
+        padding-left: 5.5%;
+    }
+
+    .enviar{
+        font-size: 3vw;
+    }
+}
   
